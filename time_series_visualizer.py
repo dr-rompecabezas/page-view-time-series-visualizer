@@ -35,12 +35,12 @@ def draw_bar_plot():
 
     # Draw bar plot
     fig, ax = plt.subplots(figsize=(20, 20))
-    fig.tight_layout()
     ax = df_bar.plot.bar()
     ax.set_xlabel("Years")
     ax.set_ylabel("Average Page Views")
     ax.legend(title='Months', shadow=True, fancybox=True)
     fig = ax.get_figure()
+    fig.tight_layout()
 
     # Save image and return fig (don't change this part)
     fig.savefig('bar_plot.png')
